@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <section>
+    <h1>Exporting Designs</h1>
+    <ul>
+      <li><a href="#XD_Files">XD Files</a></li>
+      <li><a href="#Slack_Files">Slack Files</a></li>
+      <li><a href="#Print_Work">For Print</a></li>
+    </ul>
+  </section>
+  <section class="instructions">
+    <h2 id="XD_Files">Preparing XD Files for Development</h2>
+    <h3>Save as a copy</h3>
+    <p>Keep your working file separate. Give this one a name that will be useful and descriptive. Perhaps use a standard file naming convention like so:</p>
+    <blockquote class="code">CLIENT_PROJECT_filename.version.xd</blockquote>
+    
+    <h3>Outline fonts where appropriate</h3>
+    <p>Not all font should be outlines, that makes it much harder to copy and paste. However, font in things like logo lockups should probably not be editable, and the developer would prefer to have an image rather than a bunch of HTML to embed as the logo.</p>
+    <p><span class="instructions">Select the text, then: Object > Path > Make Path</span></p>
+    <p>Note: XD keeps this as a vector, so the developer can (and probably should) export this as an SVG</p>
+
+    <h3>Embed Any Linked Symbols</h3>
+    <p>Maybe you draged a few pieces in from a UI kit? Maybe you dragged some stuff over from a previous version of the design? Best be sure that it's all going over together.</p>
+    <p><span class="instructions">Assets (⇧⌘Y) > right click on linked symbols > make local</span></p>
+
+    <h3>Create Character Styles</h3>
+    <p>Best check that your typography is consistent. In the assets panel, give the character styles names corresponding to their role in the page. At the least, define the following:</p>
+    <ul><li>h1 - h6</li>
+      <li>body copy</li>
+      <li>link text</li>
+      <li>button text</li>
+      <li>any special formatting used in the mockup (product title, pricing, hero text)</li>
+    </ul>
+
+    <h3>Mark Resources for Export</h3>
+    <p>In the layers panel, group anything together that should be a group (<span class="instructions">right click > group</span>) and then mark for export (<span class="instructions">right click > mark for export</span>).</p>
+    <p><strong>MAKE SURE THINGS HAVE MEANINGFUL NAMES!</strong> This includes groups. It can be helpful to sort the layers panel to just show one layer type. Images, for example. </p>
+    <p>Things you might want to export:</p>
+      <ul>
+      <li>Images</li>
+      <li>Symbols</li>
+      <li>Logo</li>
+      <li>background-textures</li>
+      <li>background-images</li>
+    </ul>
+
+    <h3>Create Font Bundle</h3>
+    <p>Sure, you've got a sweet colleciton of fonts on your computer, but your developer probably would probably prefer not to have to track down "IFC Insane Rodeo" on Font Squirrel or wherever.</p>
+    <p>You'll want to zip up all the fonts into a nice bundle. Keep in mind awkward font licenses may complicate your life here, which is why you should probably be using webfonts from Google or Typekit to keep that simple.</p>
+    <p>In <a href="fonts.google.com" target="_blank">Google Fonts</a>, select all fonts used and then download zip file.</p>
+    <p>Using other fonts? You’ll need to grab those separately. Here are a couple of useful links:</p>
+    <ul>  
+      <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a></li>
+      <li><a href="fonts.google.com" target="_blank">Google Analytics</a></li>
+      <li><a href="https://fonts.adobe.com/" target="_blank">Typekit</a> and <a href="https://fonts.adobe.com/typekit" target="_blank">Typekit Web Fonts</a></li>
+    </ul>
+
+    <h3>Share the Files</h3>
+    <p>Consider using a shared Drive folder or a Slack channel dedicated to the project or client you're working with. Make sure that everybody who needs them has permissions to access the files you're uploading. Then share your XD file and your font bundle.</p>
+
+    <h3>Share Developer Preview in XD</h3>
+    <p>XD has this cool new feature where it will generate an interactive spec sheet for your developers. The developer can grab copy, see font sizes, weights, line-heights, and the like. They can grab hex codes and see the exact dimensions of elements in your mockup. Plus, you can both comment in the preview, and pin comments to the designs. (Tip: Adobe CC has an extension for Slack that will alert you if you get a comment on a file you are tracking.)<p>
+    <p>In XD, click the share button in the top-right corner. Then select "share for development." It will take its sweet time, but it'll make you a link which you can share with the developer. Once it's done this, open the link and poke around, you'll probably find a few assets that aren't properly linked.</p>
+    <p>Here are a few things to check:</p>
+    <ul>
+      <li>Can you find all the images that the developer will need to export?</li>
+      <li>Can you find all the symbols the developer will need to export? This includes things like SVG icons (from the Noun Project, for example).</li>
+      <li>What about the logo?</li>
+    </ul>
+    <p>Now update anything that was missing, and update the developer preview back in XD. It'll take its sweet time (again), but it will update the preview. You won't need a new link or anything. 
+
+    <h3>Wrapping Up</h3>
+    <p>Now let your developer know where they can find the source files and the developer preview.</p>
+
+    <h3>Got a suggestion?</h3>
+    <p>This is intended to be a living document. You see the source code for this page at <a href="https://bitbucket.org/pwrightxyn/design-export-guide/src/master/" target="_blank">https://bitbucket.org/pwrightxyn/design-export-guide/src/master/</a>. Feel free to submit a pull request if you have any changes you'd like to submit.</p>
+  </section>
+  <section>
+
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

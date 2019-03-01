@@ -1,0 +1,14 @@
+{
+  "name": "designexportguide",
+  "version": "1.0.0",
+  "description": "A quick document explaining how to best export designs for development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
