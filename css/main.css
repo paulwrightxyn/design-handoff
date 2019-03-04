@@ -119,22 +119,39 @@ h1, h2, h3, h4, h5, h6{
 h1{
   font-weight: 900;
 }
+a {
+  color: royalblue;
+}
+:target {
+  background: cornsilk;
+}
+:target::before{
+  content: "";
+  display: block;
+  height: 90px;
+  margin: -90px 0 0;
+  background-color: white;
+}
+
 
 .masthead {
   background-color: white;
   border-bottom: 2px solid black;
-  position: sticky;
-  top: 0;
-  z-index: 99;
 }
 .masthead__logo {
   max-height: 2rem;
   padding: 1rem 0;
+  padding: 1rem 0;
+  max-width: 300px;
 }
 
 .main-content {
   padding: 1rem;
   max-width: 45rem;
+}
+section.instructions {
+    border-top: 1px solid black;
+    margin-top: 3rem;
 }
 .instructions img {
   max-width: calc(100vw - 4rem);
@@ -253,6 +270,18 @@ h1{
   .main-content img {
     max-width: 45rem;
   }
+  .masthead {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    transition: all ease-in-out 180ms;
+  }
+  html:not([data-scroll='0']) .masthead {
+    box-shadow: var(--box-shadow-2);
+  }
+  .masthead__logo {
+    margin-left: calc(50% - 23rem);
+  }
 }
 @media only screen and (min-width: 1200px) {
   /* Style adjustments for viewports that meet the condition */
@@ -265,6 +294,9 @@ h1{
     max-width: 60rem;
     transform: translateX(-50%);
     /*max-width: calc(100vw - 10rem);*/
+  }
+  .masthead__logo {
+    margin-left: 15rem;
   }
 }
 
